@@ -1,0 +1,11 @@
+[Unit]
+Description=Folder watchdog to S3
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/sbin/app.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
